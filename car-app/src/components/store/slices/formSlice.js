@@ -5,7 +5,7 @@ const formSlice =createSlice({
         name:'',
         cost:0
     },
-    reducers:{
+    reducer:{
         changeName(state,action){
             this.name=action.payload
 
