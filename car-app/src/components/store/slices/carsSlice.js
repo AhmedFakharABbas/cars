@@ -1,5 +1,6 @@
 import { createSlice,nanoid } from "@reduxjs/toolkit";
 const carSlice = createSlice({
+    name:'car',
   initialState: {
     searchTerm: "",
     cars: [],
@@ -19,7 +20,7 @@ const carSlice = createSlice({
     //asumption payload will have the id the car want to remove 
     removeCar( state, action) {
         const updatedCars=state.cars.filter((car)=>{
-            return car.id !=action.payload
+            return car.id !== action.payload
         })
         state.cars=updatedCars
     },
