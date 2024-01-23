@@ -4,7 +4,7 @@ import { changeName  } from "../store/index";
 function CarForm() {
  const dispatch = useDispatch();
   const name = useSelector((state) => {
-    return state.name;
+    return state.form.name;
   });
   const handleNameChange = (event) => {
     console.log('value',event.target.value)
