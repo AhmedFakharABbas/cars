@@ -7,11 +7,11 @@ const formSlice =createSlice({
     },
     reducer:{
         changeName(state,action){
-            this.name=action.payload
+            state.name=action.payload
 
         },
         changeCost(state,action){
-            this.cost=action.payload
+            state.cost=action.payload
 
         }
     }
