@@ -33,7 +33,7 @@ function CarForm() {
         </div>
         {/* cost  */}
         <div className="field-group">
-          <p>{name}</p>
+          <p>{cost}</p>
           <div className="field">
             <label className="label">Cost</label>
             <input
