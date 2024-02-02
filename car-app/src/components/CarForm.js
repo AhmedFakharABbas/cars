@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { changeName, changeCost } from "../store/index";
+import { changeName, changeCost, addCar } from "../store/index";
 
 function CarForm() {
   const dispatch = useDispatch();
@@ -16,10 +16,14 @@ function CarForm() {
     const cost = parseInt(event.target.value) || 0;
     dispatch(changeCost(cost));
   };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(addCar(name, cost));
+  };
   return (
     <div className="car-form panel">
       <h4 className="subtitle is-3">Add Car</h4>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="field-group">
           <p>{name}</p>
           <div className="field">
@@ -44,7 +48,8 @@ function CarForm() {
             />
           </div>
         </div>
-        {/* cost  */}
+        {/* submited  */}
+        <button>Submit</button>
       </form>
     </div>
   );
